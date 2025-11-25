@@ -85,6 +85,14 @@ function createDots() {
             dot.classList.add('dot_selected');
         }
         
+        // Ajoute un écouteur d'événement sur chaque dot
+        dot.addEventListener('click', () => {
+            // Change l'index du slide actuel pour correspondre au dot cliqué
+            currentIndex = i;
+            // Met à jour l'affichage du carrousel
+            updateCarousel();
+        });
+        
         // Ajoute le dot créé à l'intérieur du conteneur .dots dans le HTML
         dotsContainer.appendChild(dot);
     }

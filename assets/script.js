@@ -23,6 +23,24 @@ const slides = [
 ]
 
 // ========================================
+// PRÉCHARGEMENT DES IMAGES
+// ========================================
+
+// Fonction pour précharger toutes les images du carrousel
+function preloadImages() {
+    // Pour chaque slide du tableau
+    slides.forEach(slide => {
+        // Crée un nouvel objet Image en mémoire
+        const img = new Image();
+        // Charge l'image en mémoire (sans l'afficher)
+        img.src = slide.image;
+    });
+}
+
+// Lance le préchargement dès que le script est chargé
+preloadImages();
+
+// ========================================
 // VARIABLES GLOBALES
 // ========================================
 
